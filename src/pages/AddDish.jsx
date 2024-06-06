@@ -3,8 +3,6 @@ import image from '../assets/addDishPicture/addDishPic.jpg'
 import axios from "axios";
 import { AppContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
-
-
 const Contact = () => {
 
     const [formData, setFormData] = useState({name:"", price:"", description:"", image:""})
@@ -33,7 +31,7 @@ const Contact = () => {
             formDataObject.append('description', formData.description);
             formDataObject.append('file', formData.image);
     
-            const res = await axios.post('/api/v1/addDish', formDataObject, {
+            const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/addDish`, formDataObject, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                   }

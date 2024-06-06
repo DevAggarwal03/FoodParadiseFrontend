@@ -17,9 +17,9 @@ const Order = () => {
         const fetchDishes = async () => {
             setLoading(true);
             try {
-                
-                const res = await fetch('/api/v1/home');
+                const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/home`);
                 const output = await res.json();
+                console.log(output)
                 setDishes(output.response);
 
 

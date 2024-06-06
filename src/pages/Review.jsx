@@ -13,7 +13,7 @@ const Review = () => {
     const fetchReview = async() => {
         try {
             setLoading(true);
-            const res = await fetch('/api/v1/reviews');
+            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/reviews`);
             const output = await res.json();
             setReviews(output.response);
             setLoading(false);
@@ -40,7 +40,7 @@ const Review = () => {
             return;
         }
 
-        const res = await fetch('/api/v1/addReview', {
+        const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/addReview`, {
             method: "POST",
 
             body: JSON.stringify({

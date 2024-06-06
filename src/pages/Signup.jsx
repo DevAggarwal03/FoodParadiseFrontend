@@ -42,7 +42,7 @@ const Signup = () => {
         else{
 
             try {
-                const request = await axios.post('/api/v1/signup', 
+                const request = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/signup`, 
                     {
                         firstName: formData.firstName,
                         lastName: formData.lastName,

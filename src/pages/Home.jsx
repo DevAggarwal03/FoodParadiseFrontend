@@ -9,7 +9,6 @@ import image6 from '../assets/homePicture/6.jpg'
 import image7 from '../assets/homePicture/7.jpg'
 import image8 from '../assets/homePicture/8.jpg'
 import { Link } from "react-router-dom";
-import { AppContext } from "../context/AppContext";
 
 
 

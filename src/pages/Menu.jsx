@@ -3,7 +3,6 @@ import DishCard from "../components/DishCard";
 import Spinner from "../components/Spinner";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
-import axios from "axios";
 
 const Menu = () => {
 
@@ -19,7 +18,7 @@ const Menu = () => {
             setLoading(true);
             try {
                 
-                const res = await fetch('/api/v1/home');
+                const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/v1/home`);
                 const output = await res.json();
                 setDishes(output.response);
 
