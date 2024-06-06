@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.bottomPic {
+  mask-image: linear-gradient(to bottom, rgba(217, 217, 217, 0.5), rgba(255, 255, 255, 0));
+}
+
+.topPic {
+  mask-image: linear-gradient(to top, rgba(217, 217, 217, 0.5), rgba(255, 255, 255, 0));
+}
+
+.leftPic {
+  mask-image: linear-gradient(to left, rgba(217, 217, 217, 0.8), rgba(255, 255, 255, 0));
+}
+
+.rightPic {
+  mask-image: linear-gradient(to right, rgba(217, 217, 217, 0.8), rgba(255, 255, 255, 0));
+}
+.rightPicContact {
+  mask-image: linear-gradient(to right, rgba(217, 217, 217, 0.4), rgba(255, 255, 255, 0));
+}
+.leftPicAddDish {
+  mask-image: linear-gradient(to left, rgba(217, 217, 217, 0.4), rgba(255, 255, 255, 0));
+}
+
+.active {
+  color: white;
+  font-weight: 900;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+@media (width < 982px) {
+  .home-about-us {
+    margin-top: 300px;
+  }
+  .home-menu-text{
+    font-size: 20px;
+  }
+  .home-about-us-text{
+    font-size: 20px;
+  }
+  .home-about-us-heading{
+    font-size: 32px;
+  }
+  .home-menu-heading{
+    font-size: 32px;
+  }
+  .home-btns{
+    font-size: 20px;
+  }
+  .fries-image{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (width < 1517px) {
+  .about-text-center{
+    width: 100%;
+  }
+} 
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #25b09b;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
+
+.signup-top-div{
+  min-height: 100vh;
+  /* max-height: calc(100vh - 216px); */
+}
+
+@media (width < 1184px) {
+  .sign-up-pass-div {
+    flex-direction: column;
+    width: 100%;
+  }
+  .sign-up-pass-div > div{
+    width: 100%;
+  }
+  .signup-text{
+    font-size: 22px;
+  }
+}
+
+@media (width < 984px) {
+  .signup-image-div {
+    display: none;
+  }
+  :has(.signup-image-div){
+    justify-content: center;
+  }
+  .signup-div-before-text{
+    margin-left: 0;
+    width: 80vw;
+  }
+
+  .sign-up-pass-div {
+    flex-direction: row;
+  }
+  .sign-up-pass-div > div{
+    width: 41.6666667%;
+  }
+}
+
+@media (width < 494px) {
+  .sign-up-pass-div {
+    flex-direction: column;
+  }
+  .sign-up-pass-div > div{
+    width: 100%;
+  }
+  .signup-text{
+    font-size: 20px;
+  }
+  label  {
+    font-size: 20px;
+  }
+}
+
+.remHeight {
+  min-height: calc(100vh - 216px);
+}
+
+.remHeightReview {
+  min-height: calc(100vh - 276px);
+}
+
+.remHeightContact {
+  min-height: calc(100vh - 216px);
+}
