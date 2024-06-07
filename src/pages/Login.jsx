@@ -43,10 +43,7 @@ const Login = () => {
                 const request = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/login`, 
                     {
                         email: formData.email,
-                        password: formData.password
-                    },
-                    {
-                        withCredentials: true
+                        password: formData.password.toString()
                     }
                 )
                 
