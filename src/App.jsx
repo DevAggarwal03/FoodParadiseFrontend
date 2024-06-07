@@ -26,7 +26,7 @@ function App() {
   useEffect(() => {
       const isLoggedIn = async() => {    
           try {
-              const request = await axios.get(`${import.meta.env.BACKEND_URL}/api/v1/isCustomer`, {
+              const request = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/isCustomer`, {
                   headers: {
                     Authorization : `Bearer ${token}`
                   }
